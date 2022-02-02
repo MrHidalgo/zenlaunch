@@ -1,0 +1,167 @@
+// SECTION :: START
+
+.token {
+  z-index: 2;
+  position: relative;
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 100px);
+    border-radius: 0 0 0 100px;
+    background-color: #080e1f;
+    @include adaptive(767) {
+      border-radius: 0 0 0 50px;
+    }
+
+    &-corner {
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transform: translateY(100%);
+      width: 100px;
+      height: 100px;
+      @include adaptive(767) {
+        width: 50px;
+        height: 50px;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 100px;
+        box-shadow: 50px -50px 0 0 #080e1f;
+      }
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include adaptive(1279) {
+      padding-bottom: 100px;
+    }
+    @include adaptive(1023) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__block {
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 40px;
+      @include adaptive(1023) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &-left,
+    &-right {
+      width: calc((100% - 100px) / 2);
+      @include adaptive(1023) {
+        width: 100%;
+      }
+    }
+
+    &-left {
+      @include adaptive(1023) {
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  &__subtitle {
+    padding-bottom: 25px;
+    font-size: 26px;
+    font-weight: bold;
+    @include adaptive(1023) {
+      text-align: center;
+    }
+    @include adaptive(767) {
+      font-size: 24px;
+    }
+  }
+
+  &__heading {
+    font-weight: bold;
+    font-size: 20px;
+    @include adaptive(767) {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+
+    li {
+      display: flex;
+
+      &:not(:last-of-type) {
+        padding-bottom: 15px;
+      }
+
+      > div {
+        &:nth-of-type(1) {
+          width: 40px;
+          padding-top: 3px;
+        }
+        &:nth-of-type(2) {
+          flex: 1;
+          min-width: 1px;
+          max-width: 100%;
+        }
+      }
+
+      i {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #00d992;
+      }
+
+      p {
+        font-size: 19px;
+        font-weight: 300;
+        color: #ffffff;
+        @include adaptive(767) {
+          font-size: 16px;
+        }
+
+        strong {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  &__chart {
+    @include adaptive(1023) {
+      width: 100%;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    canvas {
+      width: 100%;
+    }
+  }
+}
+
+// SECTION :: END

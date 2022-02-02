@@ -50,122 +50,62 @@ var Common = function () {
 
 /***/ }),
 
-/***/ "./src/js/macros/footerBGAnimation.js":
-/*!********************************************!*\
-  !*** ./src/js/macros/footerBGAnimation.js ***!
-  \********************************************/
+/***/ "./src/js/macros/chart.js":
+/*!********************************!*\
+  !*** ./src/js/macros/chart.js ***!
+  \********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-var FooterBGAnimation = function () {
-  var init = function init() {
-    var particlesJSConfig = {
-      "particles": {
-        "number": {
-          "value": 100,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": {
-          "value": "#ffffff"
-        },
-        "shape": {
-          "type": "circle",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          },
-          "polygon": {
-            "nb_sides": 5
-          }
-        },
-        "opacity": {
-          "value": 1,
-          "random": true,
-          "anim": {
-            "enable": true,
-            "speed": 1,
-            "opacity_min": 0.1,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 5,
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 0.1,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.75,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2,
-          "direction": "none",
-          "random": true,
-          "straight": false,
-          "out_mode": "bounce",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": false,
-            "mode": "grab"
-          },
-          "onclick": {
-            "enable": false,
-            "mode": "push"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 400,
-            "line_linked": {
-              "opacity": 1
+var ChartCB = function () {
+  var tokenChart = function tokenChart() {
+    var tokenChart = document.getElementById('tokenChart').getContext('2d');
+    var data = {
+      labels: ['Team', 'Advisors', 'Token Sale', 'Marketing', 'Product Development', 'Liquidity Pool', 'Reserve Pool'],
+      datasets: [{
+        label: 'Dataset 1',
+        data: [12, 3, 20, 15, 10, 15, 25],
+        borderColor: ['#00d992', '#00f968', '#009e42', '#007208', '#00babb', '#04436f', '#003357'],
+        backgroundColor: ['#00d992', '#00f968', '#009e42', '#007208', '#00babb', '#04436f', '#003357'],
+        pointStyle: 'circle',
+        pointRadius: 7,
+        tension: 0.3
+      }]
+    };
+    var config = {
+      type: 'pie',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'right',
+            labels: {
+              boxWidth: 20,
+              boxHeight: 20,
+              color: '#ffffff',
+              usePointStyle: true,
+              padding: 25,
+              font: {
+                size: 17,
+                weight: 'bold',
+                family: "'Raleway', 'sans-serif'"
+              }
             }
           },
-          "bubble": {
-            "distance": 400,
-            "size": 40,
-            "duration": 2,
-            "opacity": 8,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
+          title: {
+            display: false,
+            text: ''
           }
         }
-      },
-      "retina_detect": true
+      }
     };
-    var jsonUri = "data:text/plain;base64," + window.btoa(JSON.stringify(particlesJSConfig));
-    particlesJS.load('footer__bg-canvas', jsonUri, function () {});
+    new Chart(tokenChart, config);
+  };
+
+  var init = function init() {
+    tokenChart();
   };
 
   return {
@@ -173,7 +113,7 @@ var FooterBGAnimation = function () {
   };
 }();
 
-/* harmony default export */ __webpack_exports__["default"] = (FooterBGAnimation);
+/* harmony default export */ __webpack_exports__["default"] = (ChartCB);
 
 /***/ })
 
@@ -224,7 +164,8 @@ var __webpack_exports__ = {};
   \***********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/common */ "./src/js/common/common.js");
-/* harmony import */ var _macros_footerBGAnimation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/footerBGAnimation */ "./src/js/macros/footerBGAnimation.js");
+/* harmony import */ var _macros_chart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/chart */ "./src/js/macros/chart.js");
+ // import FooterBGAnimation from "./macros/footerBGAnimation";
 
  // EVENT LISTENER - LOAD
 // ========================================
@@ -233,6 +174,8 @@ window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
   // FooterBGAnimation.init();
+
+  _macros_chart__WEBPACK_IMPORTED_MODULE_1__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

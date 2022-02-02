@@ -1,0 +1,62 @@
+// SECTION :: START
+
+section#token.token
+
+  .token__bg
+    .token__bg-corner
+
+  .c-grid
+
+    .token__wrapper
+
+      h2.token__title.c-title TOKEN ECONOMICS
+      .token__line.c-line
+
+      .token__block-wrapper
+        .token__block-left
+
+          p.token__heading KEY METRICS:
+          p.token__heading Total Supply – 100m $ZENL
+          p.token__heading Initial Circulating – 4.95%
+
+          ul.token__list
+            li
+              div
+                i
+              div
+                p!= "<strong>Team – 12.5%</strong> - Release linearly over 24 months"
+            li
+              div
+                i
+              div
+                p!= "<strong>Token sale – 15%</strong> - Seed round will have 6 month cliff followed by 12 month unlock. Private & IDO will release 10% at IDO and then over 12 months."
+            li
+              div
+                i
+              div
+                p!= "<strong>Advisors – 2.5%</strong> - The advisor tokens will be released over a 6-month period."
+            li
+              div
+                i
+              div
+                p!= "<strong>Operations- 25%</strong> - Split between marketing, development and other core functions, unlock linearly over 24 months"
+            li
+              div
+                i
+              div
+                p!= "<strong>Liquidity Pool -15%</strong> - For staking rewards and other liquidity considerations, linear over 18 months"
+            li
+              div
+                i
+              div
+                p!= "<strong>Reserve Pool – 30%</strong> - Linear unlock over 30 month, this is for presale investment in our launchpad projects and other discretionary needs of the platform."
+
+        .token__block-right
+
+          p.token__subtitle!= "ZEN LAUNCH TOKEN <br>DISTRIBUTION"
+
+          .token__chart
+            canvas(id="tokenChart")
+
+
+// SECTION :: END
