@@ -12,6 +12,9 @@
     font-weight: 800;
     text-align: center;
     text-transform: uppercase;
+    @include adaptive(767) {
+      font-size: 21px;
+    }
   }
 
   &__list {

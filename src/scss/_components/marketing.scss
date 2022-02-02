@@ -1,0 +1,233 @@
+// SECTION :: START
+
+.marketing {
+  z-index: 7;
+  position: relative;
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px 0 100px 0;
+    background: linear-gradient(to right, rgba(15,26,57,1) 0%,rgba(14,46,87,1) 50%,rgba(15,26,57,1) 100%);
+    @include adaptive(767) {
+      border-radius: 50px 0 50px 0;
+    }
+
+    &-corner {
+      overflow: hidden;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      @include adaptive(767) {
+        width: 50px;
+        height: 50px;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        border-radius: 100px;
+      }
+
+      &-1 {
+        top: 0;
+        right: 0;
+        transform: translateY(-100%);
+
+        &:before {
+          bottom: 0;
+          right: 0;
+          box-shadow: 50px 50px 0 0 #0f1b3a;
+        }
+      }
+      &-2 {
+        left: 0;
+        bottom: 0;
+        transform: translateY(100%);
+
+        &:before {
+          top: 0;
+          left: 0;
+          box-shadow: -50px -50px 0 0 #0f1b3a;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include adaptive(767) {
+      padding-bottom: 75px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    &-wrapper {
+      position: relative;
+      left: -150px;
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 150px);
+      @include adaptive(1279) {
+        left: -50px;
+        width: calc(100% + 50px);
+      }
+
+      > div {
+        width: 100%;
+        max-width: calc(100% / 2);
+        padding-left: 150px;
+        @include adaptive(1279) {
+          padding-left: 50px;
+        }
+        @include adaptive(1023) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &-row {
+      position: relative;
+      left: -50px;
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 50px);
+      @include adaptive(1279) {
+        left: -25px;
+        width: calc(100% + 25px);
+      }
+
+      > div {
+        width: 100%;
+        max-width: calc(100% / 3);
+        padding-left: 50px;
+        padding-bottom: 50px;
+        @include adaptive(1279) {
+          padding-left: 25px;
+        }
+        @include adaptive(767) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &-head {
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 120px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00f968 0%,#00babb 100%);
+
+      img {
+        display: block;
+        max-width: 69px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &-body {
+      padding-top: 25px;
+
+      p {
+        font-size: 19px;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        display: flex;
+        align-items: center;
+        padding-bottom: 25px;
+        @include adaptive(767) {
+          flex-wrap: wrap;
+        }
+
+        > div {
+          &:nth-of-type(1) {
+            width: 100%;
+            max-width: 90px;
+            @include adaptive(767) {
+              margin-left: auto;
+              margin-right: auto;
+              padding-bottom: 25px;
+            }
+
+            img {
+              display: block;
+              max-width: 60px;
+              height: auto;
+              @include adaptive(767) {
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          }
+          &:nth-of-type(2) {
+            flex: 1;
+            min-width: 1px;
+            max-width: 100%;
+            font-size: 19px;
+            font-weight: 300;
+            color: #cccccc;
+            @include adaptive(767) {
+              flex: 100%;
+              font-size: 14px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+    @include adaptive(767) {
+      font-size: 21px;
+      text-align: center;
+    }
+  }
+
+  &__desc {
+    color: #cccccc;
+    font-size: 16px;
+    font-weight: 300;
+    @include adaptive(767) {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}
+
+// SECTION :: END
