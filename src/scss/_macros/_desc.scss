@@ -1,0 +1,15 @@
+// DESC :: START
+
+.c-desc {
+  font-weight: 500;
+  font-size: 19px;
+  color: #ffffff;
+  @include adaptive(1279) {
+    font-size: 16px;
+  }
+  @include adaptive(767) {
+    font-size: 14px;
+  }
+}
+
+// DESC :: END
