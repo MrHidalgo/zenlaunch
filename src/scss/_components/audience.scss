@@ -1,0 +1,130 @@
+// SECTION :: START
+
+.audience {
+  z-index: 8;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  &__desc {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    padding-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: 800;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+
+    &.is-active {
+      .audience__box {
+        &-head {
+          box-shadow: 0 0 70px 0 rgba(#00eb74, 0.6);
+          background: radial-gradient(ellipse at center, #00f968 0%,#00babb 100%);
+
+          &:after {
+            display: none;
+          }
+
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+      }
+    }
+
+    &-wrapper {
+      position: relative;
+      left: -75px;
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 75px);
+
+      > div {
+        width: 100%;
+        max-width: calc(100% / 3);
+        padding-left: 75px;
+        padding-bottom: 50px;
+        @include adaptive(767) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &-head {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+      background: conic-gradient(from 35deg, #080e1f, #00e873);
+      @include adaptive(1279) {
+        width: 155px;
+        height: 155px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        border-radius: 50%;
+        background-color: #04436f;
+        @include adaptive(1279) {
+          top: 5px;
+          left: 5px;
+          width: calc(100% - 10px);
+          height: calc(100% - 10px);
+        }
+      }
+
+      img {
+        z-index: 2;
+        position: relative;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 99px;
+        margin-left: auto;
+        margin-right: auto;
+        @include adaptive(1279) {
+          max-height: 79px;
+        }
+      }
+    }
+
+    &-body {
+      padding-top: 40px;
+
+      p {
+        width: 100%;
+        max-width: 240px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// SECTION :: END
