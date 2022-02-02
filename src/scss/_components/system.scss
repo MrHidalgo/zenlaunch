@@ -7,22 +7,19 @@
   &__bg {
     z-index: 0;
     position: absolute;
-    top: -100px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% + 100px);
-    border-radius: 0 0 0 100px;
+    height: 100%;
+    border-radius: 0 100px 0 100px;
     background: linear-gradient(to right, rgba(15,26,57,1) 0%,rgba(14,46,87,1) 50%,rgba(15,26,57,1) 100%);
     @include adaptive(767) {
-      border-radius: 0 0 0 50px;
+      border-radius: 0 50px 0 50px;
     }
 
     &-corner {
       overflow: hidden;
       position: absolute;
-      right: 0;
-      bottom: 0;
-      transform: translateY(100%);
       width: 100px;
       height: 100px;
       @include adaptive(767) {
@@ -30,16 +27,36 @@
         height: 50px;
       }
 
-      &:after {
+      &:before {
         content: "";
         display: block;
+        position: absolute;
         width: 200%;
         height: 200%;
-        position: absolute;
-        top: 0;
-        right: 0;
         border-radius: 100px;
-        box-shadow: 50px -50px 0 0 #0f1b3a;
+      }
+
+      &-1 {
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+
+        &:before {
+          bottom: 0;
+          left: 0;
+          box-shadow: -50px 50px 0 0 #0f1b3a;
+        }
+      }
+      &-2 {
+        right: 0;
+        bottom: 0;
+        transform: translateY(100%);
+
+        &:before {
+          top: 0;
+          right: 0;
+          box-shadow: 50px -50px 0 0 #0f1b3a;
+        }
       }
     }
   }
