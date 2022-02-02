@@ -10,7 +10,7 @@ window.addEventListener('load', (ev) => {
   Common.initLoad();
 
   // MACROS
-  FooterBGAnimation.init();
+  // FooterBGAnimation.init();
 
 }, false);
 

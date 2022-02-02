@@ -59,7 +59,7 @@ var Common = function () {
 __webpack_require__.r(__webpack_exports__);
 var FooterBGAnimation = function () {
   var init = function init() {
-    particlesJS.load('particles-js', {
+    var particlesJSConfig = {
       "particles": {
         "number": {
           "value": 100,
@@ -79,11 +79,6 @@ var FooterBGAnimation = function () {
           },
           "polygon": {
             "nb_sides": 5
-          },
-          "image": {
-            "src": "img/github.svg",
-            "width": 100,
-            "height": 100
           }
         },
         "opacity": {
@@ -132,7 +127,7 @@ var FooterBGAnimation = function () {
         "detect_on": "canvas",
         "events": {
           "onhover": {
-            "enable": true,
+            "enable": false,
             "mode": "grab"
           },
           "onclick": {
@@ -168,9 +163,9 @@ var FooterBGAnimation = function () {
         }
       },
       "retina_detect": true
-    }, function () {
-      console.log('particles.json loaded...');
-    });
+    };
+    var jsonUri = "data:text/plain;base64," + window.btoa(JSON.stringify(particlesJSConfig));
+    particlesJS.load('footer__bg-canvas', jsonUri, function () {});
   };
 
   return {
@@ -237,8 +232,7 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
-
-  _macros_footerBGAnimation__WEBPACK_IMPORTED_MODULE_1__["default"].init();
+  // FooterBGAnimation.init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

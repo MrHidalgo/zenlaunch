@@ -1,4 +1,10 @@
-.footer__bg img {
+.c-grid-fluid, .c-grid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer__bg-visual {
   position: absolute;
   top: 0;
   left: 0;
@@ -38,60 +44,6 @@
   content: "\e003";
 }
 
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-Black.woff2") format("woff2"), url("../fonts/Raleway-Black.woff") format("woff"), url("../fonts/Raleway-Black.ttf") format("truetype"), url("../fonts/Raleway-Black.svg#Raleway") format("svg");
-  font-style: normal;
-  font-weight: 900;
-}
-@font-face {
-  font-family: "RalewayExtraBold";
-  src: url("../fonts/RalewayExtraBold.woff2") format("woff2"), url("../fonts/RalewayExtraBold.woff") format("woff"), url("../fonts/RalewayExtraBold.ttf") format("truetype"), url("../fonts/RalewayExtraBold.svg#RalewayExtraBold") format("svg");
-  font-style: normal;
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff"), url("../fonts/Raleway-Bold.ttf") format("truetype"), url("../fonts/Raleway-Bold.svg#Raleway") format("svg");
-  font-style: normal;
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway-SemiBold.woff") format("woff"), url("../fonts/Raleway-SemiBold.ttf") format("truetype"), url("../fonts/Raleway-SemiBold.svg#Raleway") format("svg");
-  font-style: normal;
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-Medium.woff2") format("woff2"), url("../fonts/Raleway-Medium.woff") format("woff"), url("../fonts/Raleway-Medium.ttf") format("truetype"), url("../fonts/Raleway-Medium.svg#Raleway") format("svg");
-  font-style: normal;
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff"), url("../fonts/Raleway-Regular.ttf") format("truetype"), url("../fonts/Raleway-Regular.svg#Raleway") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-Light.woff2") format("woff2"), url("../fonts/Raleway-Light.woff") format("woff"), url("../fonts/Raleway-Light.ttf") format("truetype"), url("../fonts/Raleway-Light.svg#Raleway") format("svg");
-  font-style: normal;
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-ExtraLight.woff2") format("woff2"), url("../fonts/Raleway-ExtraLight.woff") format("woff"), url("../fonts/Raleway-ExtraLight.ttf") format("truetype"), url("../fonts/Raleway-ExtraLight.svg#Raleway") format("svg");
-  font-style: normal;
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-Thin.woff2") format("woff2"), url("../fonts/Raleway-Thin.woff") format("woff"), url("../fonts/Raleway-Thin.ttf") format("truetype"), url("../fonts/Raleway-Thin.svg#Raleway") format("svg");
-  font-style: normal;
-  font-weight: 100;
-}
 html,
 body {
   width: 100%;
@@ -230,6 +182,17 @@ picture {
   height: 100%;
 }
 
+.c-grid {
+  max-width: 1300px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.c-grid-fluid {
+  max-width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -262,12 +225,83 @@ picture {
   color: #ffffff;
   font-weight: 300;
 }
+@media screen and (max-width: 767px) {
+  .copyright {
+    font-size: 14px;
+  }
+}
 
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
 .icon-font {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   line-height: 1;
+}
+
+.c-title {
+  font-size: 37px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+}
+@media screen and (max-width: 1279px) {
+  .c-title {
+    font-size: 33px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .c-title {
+    font-size: 30px;
+  }
+}
+.c-title.c-title--big {
+  font-size: 80px;
+  line-height: 1;
+  font-weight: 900;
+}
+@media screen and (max-width: 1535px) {
+  .c-title.c-title--big {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 1365px) {
+  .c-title.c-title--big {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .c-title.c-title--big {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .c-title.c-title--big {
+    font-size: 37px;
+  }
 }
 
 .footer {
@@ -283,17 +317,46 @@ picture {
   height: 100%;
 }
 .footer__bg-canvas {
+  opacity: 0.55;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
+.footer__bg-line {
+  opacity: 0.95;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 55%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: skewX(-30deg);
+      -ms-transform: skewX(-30deg);
+          transform: skewX(-30deg);
+  background-color: #080e1f;
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
+}
 .footer__container-1 {
   z-index: 2;
   position: relative;
-  padding-top: 285px;
-  padding-bottom: 285px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 150px;
 }
 .footer__container-2 {
   z-index: 3;
@@ -324,12 +387,6 @@ picture {
 }
 .footer__title {
   padding-bottom: 55px;
-  font-size: 80px;
-  line-height: 1;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-align: center;
-  color: #ffffff;
 }
 .footer__contacts {
   display: -webkit-box;
@@ -351,8 +408,42 @@ picture {
   text-align: center;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1279px) {
+  .footer__contacts-title, .footer__contacts-link {
+    font-size: 16px;
+  }
+}
 .footer__contacts-title {
   font-weight: 900;
+}
+.footer__contacts-link {
+  position: relative;
+}
+.footer__contacts-link:hover:before, .footer__contacts-link:hover:after {
+  width: 50%;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.footer__contacts-link:before, .footer__contacts-link:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.footer__contacts-link:before {
+  left: 50%;
+}
+.footer__contacts-link:after {
+  right: 50%;
+}
+.footer__contacts-link:hover {
+  color: #ffffff;
 }
 .footer__contacts-link strong {
   font-family: "RalewayExtraBold", sans-serif;
@@ -374,6 +465,8 @@ picture {
   display: flex;
 }
 .footer__social li a {
+  overflow: hidden;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,7 +488,32 @@ picture {
   background-image: -o-linear-gradient(131deg, #00f968 0%, #00babb 100%);
   background-image: linear-gradient(-41deg, #00f968 0%, #00babb 100%);
 }
+.footer__social li a:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -o-linear-gradient(131deg, #00F968, #00BABB, #00F968, #00BABB);
+  background: linear-gradient(-41deg, #00F968, #00BABB, #00F968, #00BABB);
+  background-size: 300% 300%;
+  -webkit-animation: gradient 3s ease infinite;
+          animation: gradient 3s ease infinite;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.footer__social li a:hover:after {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
 .footer__social li a .icon-font {
+  z-index: 2;
+  position: relative;
   color: #000;
   font-size: 28px;
 }

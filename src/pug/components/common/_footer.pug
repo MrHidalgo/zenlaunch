@@ -3,9 +3,10 @@
 footer#footer.footer
 
   .footer__bg
-    img(src="img/img-footer-bg.svg" alt="")
+    img.footer__bg-visual(src="img/img-footer-bg.svg" alt="")
 
-    .footer__bg-canvas#particles-js
+    #footer__bg-canvas.footer__bg-canvas
+    .footer__bg-line
 
   .footer__container.footer__container-1
     .c-grid-fluid
@@ -15,11 +16,11 @@ footer#footer.footer
           a.logo__btn(href="#")
             img.logo__img(src="img/logo.png" alt="")
 
-        h2.footer__title Thank you
+        h2.footer__title.c-title.c-title--big Thank you
 
         .footer__contacts
           p.footer__contacts-title Contact:
-          a.footer__contacts-link(href="#")!= "<strong>Email</strong> – ryan@notebook.capital"
+          a.footer__contacts-link(href="mailto:ryan@notebook.capital")!= "<strong>Email</strong> – <span>ryan@notebook.capital</span>"
 
         ul.footer__social
           li

@@ -28,6 +28,22 @@
   font-size: 16px;
   color: #ffffff;
   font-weight: 300;
+  @include adaptive(767) {
+    font-size: 14px;
+  }
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
 
 // COMMON :: END

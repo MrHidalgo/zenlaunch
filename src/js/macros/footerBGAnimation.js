@@ -1,6 +1,6 @@
 const FooterBGAnimation = (function() {
   const init = function() {
-    particlesJS.load('particles-js', {
+    const particlesJSConfig = {
       "particles": {
         "number": {
           "value": 100,
@@ -20,11 +20,6 @@ const FooterBGAnimation = (function() {
           },
           "polygon": {
             "nb_sides": 5
-          },
-          "image": {
-            "src": "img/github.svg",
-            "width": 100,
-            "height": 100
           }
         },
         "opacity": {
@@ -73,7 +68,7 @@ const FooterBGAnimation = (function() {
         "detect_on": "canvas",
         "events": {
           "onhover": {
-            "enable": true,
+            "enable": false,
             "mode": "grab"
           },
           "onclick": {
@@ -109,9 +104,11 @@ const FooterBGAnimation = (function() {
         }
       },
       "retina_detect": true
-    }, function() {
-      console.log('particles.json loaded...');
-    });
+    };
+
+    const jsonUri = "data:text/plain;base64,"+window.btoa(JSON.stringify(particlesJSConfig));
+
+    particlesJS.load('footer__bg-canvas', jsonUri, function() {});
   };
   return {
     init: init

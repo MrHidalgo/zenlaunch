@@ -1,12 +1,34 @@
 // TITLE :: START
 
 .c-title {
-  &__text {
-    &-wrap {}
+  font-size: 37px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+  @include adaptive(1279) {
+    font-size: 33px;
+  }
+  @include adaptive(767) {
+    font-size: 30px;
   }
 
-  &__icon {
-    &-wrap {}
+  &.c-title--big {
+    font-size: 80px;
+    line-height: 1;
+    font-weight: 900;
+    @include adaptive(1535) {
+      font-size: 70px;
+    }
+    @include adaptive(1365) {
+      font-size: 60px;
+    }
+    @include adaptive(1279) {
+      font-size: 50px;
+    }
+    @include adaptive(767) {
+      font-size: 37px;
+    }
   }
 }
 
