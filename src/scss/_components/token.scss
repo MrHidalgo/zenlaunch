@@ -55,6 +55,9 @@
     @include adaptive(1023) {
       padding-bottom: 50px;
     }
+    @include adaptive(767) {
+      padding-bottom: 100px;
+    }
   }
 
   &__block {
