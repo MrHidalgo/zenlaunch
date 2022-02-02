@@ -1,0 +1,140 @@
+// SECTION :: START
+
+.partners {
+  z-index: 5;
+  position: relative;
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 100px);
+    border-radius: 0 0 100px 0;
+    background-color: #080e1f;
+    @include adaptive(767) {
+      border-radius: 0 0 50px 0;
+    }
+
+    &-corner {
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(100%);
+      width: 100px;
+      height: 100px;
+      @include adaptive(767) {
+        width: 50px;
+        height: 50px;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 100px;
+        box-shadow: -50px -50px 0 0 #080e1f;
+      }
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__desc {
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    @include adaptive(767) {
+      flex-direction: column;
+    }
+
+    &-wrapper {
+      position: relative;
+      left: -50px;
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 50px);
+
+      > div {
+        width: 100%;
+        max-width: calc(100% / 2);
+        padding-left: 50px;
+        padding-bottom: 50px;
+        @include adaptive(1023) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &-left {
+      width: 100%;
+      max-width: 200px;
+      @include adaptive(767) {
+        max-width: 100%;
+        padding-bottom: 20px;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &-right {
+      flex: 1;
+      min-width: 1px;
+      max-width: 100%;
+      @include adaptive(767) {
+        text-align: center;
+      }
+    }
+
+    &-title {
+      text-transform: uppercase;
+      color: #00f968;
+      font-size: 19px;
+      font-weight: bold;
+      @include adaptive(1023) {
+        font-size: 16px;
+      }
+    }
+
+    &-subtitle {
+      padding-bottom: 20px;
+      font-size: 16px;
+      font-weight: 300;
+      @include adaptive(1023) {
+        font-size: 14px;
+      }
+    }
+
+    &-desc {
+      font-size: 19px;
+      font-weight: 300;
+      @include adaptive(767) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// SECTION :: END
