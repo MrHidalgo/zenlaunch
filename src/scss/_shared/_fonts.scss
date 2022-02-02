@@ -1,0 +1,13 @@
+/// @include mixinFontFace("JournalRegular", "-Bold", "../fonts/", normal, otf eot woff2 woff ttf svg);
+/// ===============
+
+@include mixinFontFace("Raleway", "-Black", "../fonts/", 900, woff2 woff ttf svg);
+@include mixinFontFace("RalewayExtraBold", "", "../fonts/", bold, woff2 woff ttf svg);
+@include mixinFontFace("Raleway", "-Bold", "../fonts/", bold, woff2 woff ttf svg);
+@include mixinFontFace("Raleway", "-SemiBold", "../fonts/", 600, woff2 woff ttf svg);
+@include mixinFontFace("Raleway", "-Medium", "../fonts/", 500, woff2 woff ttf svg);
+@include mixinFontFace("Raleway", "-Regular", "../fonts/", normal, woff2 woff ttf svg);
+@include mixinFontFace("Raleway", "-Light", "../fonts/", 300, woff2 woff ttf svg);
+@include mixinFontFace("Raleway", "-ExtraLight", "../fonts/", 200, woff2 woff ttf svg);
+@include mixinFontFace("Raleway", "-Thin", "../fonts/", 100, woff2 woff ttf svg);
+

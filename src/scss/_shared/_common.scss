@@ -1,0 +1,33 @@
+// COMMON :: START
+
+.logo {
+  display: flex;
+
+  &.logo--footer {
+    width: 100%;
+    max-width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+// COMMON :: END
