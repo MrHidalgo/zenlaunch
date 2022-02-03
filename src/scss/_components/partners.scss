@@ -47,11 +47,8 @@
   &__wrapper {
     z-index: 2;
     position: relative;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 100px;
-    @include adaptive(767) {
-      padding-top: 50px;
-    }
   }
 
   &__desc {

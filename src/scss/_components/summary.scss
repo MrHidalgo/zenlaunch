@@ -61,7 +61,10 @@
     min-height: 100%;
     padding: 2px;
     border-radius: 10px;
-    background: linear-gradient(135deg, rgba(0,249,104,1) 0%,rgba(0,186,187,1) 100%);
+    //background: linear-gradient(135deg, rgba(0,249,104,1) 0%,rgba(0,186,187,1) 100%);
+    background: linear-gradient(135deg, #00F968, #00BABB, #00F968, #00BABB);
+    background-size: 500% 500%;
+    animation: gradient 10s linear infinite;
 
     &-1 {
       > div {

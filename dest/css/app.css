@@ -343,8 +343,11 @@ picture {
   width: 98px;
   height: 5px;
   margin: 25px auto;
-  background: -o-linear-gradient(315deg, #00f968 0%, #00babb 100%);
-  background: linear-gradient(135deg, #00f968 0%, #00babb 100%);
+  background: -o-linear-gradient(315deg, #00F968, #00BABB, #00F968, #00BABB);
+  background: linear-gradient(135deg, #00F968, #00BABB, #00F968, #00BABB);
+  background-size: 300% 300%;
+  -webkit-animation: gradient 5s ease-in-out infinite;
+          animation: gradient 5s ease-in-out infinite;
 }
 
 .header {
@@ -1187,8 +1190,11 @@ picture {
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
-  background: -o-linear-gradient(315deg, #00f968 0%, #00babb 100%);
-  background: linear-gradient(135deg, #00f968 0%, #00babb 100%);
+  background: -o-linear-gradient(315deg, #00F968, #00BABB, #00F968, #00BABB);
+  background: linear-gradient(135deg, #00F968, #00BABB, #00F968, #00BABB);
+  background-size: 500% 500%;
+  -webkit-animation: gradient 10s linear infinite;
+          animation: gradient 10s linear infinite;
 }
 @media screen and (max-width: 1279px) {
   .problems__box-head {
@@ -1237,7 +1243,7 @@ picture {
   z-index: 11;
   position: relative;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 .signal__block-wrapper {
   position: relative;
@@ -1431,7 +1437,7 @@ picture {
 .value__wrapper {
   z-index: 2;
   position: relative;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 100px;
 }
 .value__desc {
@@ -1626,8 +1632,11 @@ picture {
           flex-direction: column;
   padding: 1px;
   border-radius: 10px;
-  background: -o-linear-gradient(315deg, #00f968 0%, #00babb 100%);
-  background: linear-gradient(135deg, #00f968 0%, #00babb 100%);
+  background: -o-linear-gradient(315deg, #00F968, #00BABB, #00F968, #00BABB);
+  background: linear-gradient(135deg, #00F968, #00BABB, #00F968, #00BABB);
+  background-size: 500% 500%;
+  -webkit-animation: gradient 10s linear infinite;
+          animation: gradient 10s linear infinite;
 }
 @media screen and (max-width: 767px) {
   .outstanding__table {
@@ -2014,8 +2023,11 @@ picture {
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
-  background: -o-linear-gradient(315deg, #00f968 0%, #00babb 100%);
-  background: linear-gradient(135deg, #00f968 0%, #00babb 100%);
+  background: -o-linear-gradient(315deg, #00F968, #00BABB, #00F968, #00BABB);
+  background: linear-gradient(135deg, #00F968, #00BABB, #00F968, #00BABB);
+  background-size: 500% 500%;
+  -webkit-animation: gradient 10s linear infinite;
+          animation: gradient 10s linear infinite;
 }
 .marketing__block-head img {
   display: block;
@@ -2385,8 +2397,11 @@ picture {
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
-  background: -o-linear-gradient(315deg, #00f968 0%, #00babb 100%);
-  background: linear-gradient(135deg, #00f968 0%, #00babb 100%);
+  background: -o-linear-gradient(315deg, #00F968, #00BABB, #00F968, #00BABB);
+  background: linear-gradient(135deg, #00F968, #00BABB, #00F968, #00BABB);
+  background-size: 500% 500%;
+  -webkit-animation: gradient 10s linear infinite;
+          animation: gradient 10s linear infinite;
 }
 @media screen and (max-width: 1279px) {
   .system__box-head {
@@ -2435,12 +2450,7 @@ picture {
   z-index: 6;
   position: relative;
   padding-top: 100px;
-  padding-bottom: 100px;
-}
-@media screen and (max-width: 1023px) {
-  .strategy {
-    padding-bottom: 50px;
-  }
+  padding-bottom: 50px;
 }
 .strategy__desc {
   width: 100%;
@@ -2600,13 +2610,8 @@ picture {
 .partners__wrapper {
   z-index: 2;
   position: relative;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 100px;
-}
-@media screen and (max-width: 767px) {
-  .partners__wrapper {
-    padding-top: 50px;
-  }
 }
 .partners__desc {
   padding-bottom: 50px;
@@ -2777,8 +2782,11 @@ picture {
   min-height: 100%;
   padding: 2px;
   border-radius: 10px;
-  background: -o-linear-gradient(315deg, #00f968 0%, #00babb 100%);
-  background: linear-gradient(135deg, #00f968 0%, #00babb 100%);
+  background: -o-linear-gradient(315deg, #00F968, #00BABB, #00F968, #00BABB);
+  background: linear-gradient(135deg, #00F968, #00BABB, #00F968, #00BABB);
+  background-size: 500% 500%;
+  -webkit-animation: gradient 10s linear infinite;
+          animation: gradient 10s linear infinite;
 }
 .summary__box-1 > div {
   background-color: #0f2345;
@@ -3455,8 +3463,11 @@ picture {
           flex-direction: column;
   padding: 1px;
   border-radius: 10px;
-  background: -o-linear-gradient(315deg, #00f968 0%, #00babb 100%);
-  background: linear-gradient(135deg, #00f968 0%, #00babb 100%);
+  background: -o-linear-gradient(315deg, #00F968, #00BABB, #00F968, #00BABB);
+  background: linear-gradient(135deg, #00F968, #00BABB, #00F968, #00BABB);
+  background-size: 500% 500%;
+  -webkit-animation: gradient 10s linear infinite;
+          animation: gradient 10s linear infinite;
 }
 @media screen and (max-width: 767px) {
   .raise__table {

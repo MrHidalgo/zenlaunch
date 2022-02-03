@@ -5,7 +5,9 @@
   width: 98px;
   height: 5px;
   margin: 25px auto;
-  background: linear-gradient(135deg, rgba(0,249,104,1) 0%,rgba(0,186,187,1) 100%);
+  background: linear-gradient(135deg, #00F968, #00BABB, #00F968, #00BABB);
+  background-size: 300% 300%;
+  animation: gradient 5s ease-in-out infinite;
 }
 
 // LINE :: END

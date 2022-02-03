@@ -76,7 +76,10 @@
     flex-direction: column;
     padding: 1px;
     border-radius: 10px;
-    background: linear-gradient(135deg, #00f968 0%,#00babb 100%);
+    //background: linear-gradient(135deg, #00f968 0%,#00babb 100%);
+    background: linear-gradient(135deg, #00F968, #00BABB, #00F968, #00BABB);
+    background-size: 500% 500%;
+    animation: gradient 10s linear infinite;
     @include adaptive(767) {
       width: 800px;
     }
