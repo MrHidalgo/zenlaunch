@@ -534,6 +534,133 @@ var FooterBGAnimation = function () {
 
 /* harmony default export */ __webpack_exports__["default"] = (FooterBGAnimation);
 
+/***/ }),
+
+/***/ "./src/js/macros/headerBGAnimation.js":
+/*!********************************************!*\
+  !*** ./src/js/macros/headerBGAnimation.js ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var HeaderBGAnimation = function () {
+  var init = function init() {
+    var particlesJSConfig = {
+      "particles": {
+        "number": {
+          "value": 100,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          }
+        },
+        "opacity": {
+          "value": 1,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 5,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.75,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "bounce",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": false,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": false,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    };
+    var jsonUri = "data:text/plain;base64," + window.btoa(JSON.stringify(particlesJSConfig));
+    particlesJS.load('future__bg-canvas', jsonUri, function () {});
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (HeaderBGAnimation);
+
 /***/ })
 
 /******/ 	});
@@ -585,7 +712,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/common */ "./src/js/common/common.js");
 /* harmony import */ var _macros_footerBGAnimation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/footerBGAnimation */ "./src/js/macros/footerBGAnimation.js");
 /* harmony import */ var _macros_IntroductionBGAnimation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./macros/IntroductionBGAnimation */ "./src/js/macros/IntroductionBGAnimation.js");
-/* harmony import */ var _macros_chart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./macros/chart */ "./src/js/macros/chart.js");
+/* harmony import */ var _macros_headerBGAnimation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./macros/headerBGAnimation */ "./src/js/macros/headerBGAnimation.js");
+/* harmony import */ var _macros_chart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./macros/chart */ "./src/js/macros/chart.js");
+
 
 
 
@@ -595,10 +724,11 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
+  // HeaderBGAnimation.init();
+  // IntroductionBGAnimation.init();
   // FooterBGAnimation.init();
 
-  _macros_IntroductionBGAnimation__WEBPACK_IMPORTED_MODULE_2__["default"].init();
-  _macros_chart__WEBPACK_IMPORTED_MODULE_3__["default"].init();
+  _macros_chart__WEBPACK_IMPORTED_MODULE_4__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

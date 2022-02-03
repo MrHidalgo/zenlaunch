@@ -3,6 +3,13 @@
 .logo {
   display: flex;
 
+  &.logo--header {
+    width: 100%;
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &.logo--footer {
     width: 100%;
     max-width: 310px;
