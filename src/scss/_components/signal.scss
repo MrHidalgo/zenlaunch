@@ -1,0 +1,126 @@
+// SECTION :: START
+
+.signal {
+  z-index: 11;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &__block {
+    &-wrapper {
+      position: relative;
+      left: -125px;
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 125px);
+      padding-top: 50px;
+      @include adaptive(1023) {
+        left: -50px;
+        width: calc(100% + 50px);
+      }
+
+      > div {
+        width: 100%;
+        max-width: calc(100% / 2);
+        padding-left: 125px;
+        @include adaptive(1023) {
+          padding-left: 50px;
+        }
+        @include adaptive(767) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    padding-bottom: 50px;
+    font-size: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+    @include adaptive(767) {
+      font-size: 21px;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding-bottom: 40px;
+      @include adaptive(767) {
+        padding-bottom: 50px;
+      }
+
+      > div {
+        &:nth-of-type(1) {
+          width: 100%;
+          max-width: 75px;
+
+          img {
+            display: block;
+            max-width: 35px;
+            height: auto;
+          }
+        }
+        &:nth-of-type(2) {
+          flex: 1;
+          min-width: 1px;
+          max-width: 100%;
+          font-size: 19px;
+          font-weight: 300;
+          @include adaptive(767) {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 55px 65px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 234, 124);
+    background-color: #0f1b3a;
+    @include adaptive(767) {
+      padding: 30px 25px;
+    }
+
+    img {
+      display: block;
+      max-width: 153px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 55px;
+      @include adaptive(767) {
+        max-width: 125px;
+        margin-bottom: 30px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 25px;
+      text-align: center;
+      @include adaptive(767) {
+        font-size: 14px;
+      }
+
+      & + p {
+        padding-top: 25px;
+      }
+    }
+  }
+}
+
+// SECTION :: END
