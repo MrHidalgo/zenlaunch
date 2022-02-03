@@ -699,6 +699,39 @@ var HeaderFixed = function () {
 
 /* harmony default export */ __webpack_exports__["default"] = (HeaderFixed);
 
+/***/ }),
+
+/***/ "./src/js/macros/scrollViewPortAnimation.js":
+/*!**************************************************!*\
+  !*** ./src/js/macros/scrollViewPortAnimation.js ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var ScrollViewPortAnimation = function () {
+  var init = function init() {
+    var wow = new WOW({
+      boxClass: 'wow',
+      animateClass: 'animated',
+      offset: 50,
+      mobile: true,
+      live: false,
+      callback: function callback(box) {// the callback is fired every time an animation is started
+        // the argument that is passed in is the DOM node being animated
+      },
+      scrollContainer: null,
+      resetAnimation: true
+    });
+    wow.init();
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ScrollViewPortAnimation);
+
 /***/ })
 
 /******/ 	});
@@ -753,6 +786,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _macros_IntroductionBGAnimation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./macros/IntroductionBGAnimation */ "./src/js/macros/IntroductionBGAnimation.js");
 /* harmony import */ var _macros_footerBGAnimation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./macros/footerBGAnimation */ "./src/js/macros/footerBGAnimation.js");
 /* harmony import */ var _macros_chart__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./macros/chart */ "./src/js/macros/chart.js");
+/* harmony import */ var _macros_scrollViewPortAnimation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./macros/scrollViewPortAnimation */ "./src/js/macros/scrollViewPortAnimation.js");
+
 
 
 
@@ -770,6 +805,7 @@ window.addEventListener('load', function (ev) {
   _macros_IntroductionBGAnimation__WEBPACK_IMPORTED_MODULE_3__["default"].init();
   _macros_footerBGAnimation__WEBPACK_IMPORTED_MODULE_4__["default"].init();
   _macros_chart__WEBPACK_IMPORTED_MODULE_5__["default"].init();
+  _macros_scrollViewPortAnimation__WEBPACK_IMPORTED_MODULE_6__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 
