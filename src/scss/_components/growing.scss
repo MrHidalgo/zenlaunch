@@ -1,0 +1,75 @@
+// SECTION :: START
+
+.growing {
+  z-index: 13;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &__desc {
+    &-wrapper {
+      position: relative;
+      left: -50px;
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 50px);
+      padding-top: 25px;
+      padding-bottom: 50px;
+
+      > div {
+        width: 100%;
+        max-width: calc(100% / 3);
+        padding-left: 50px;
+        padding-bottom: 50px;
+        @include adaptive(767) {
+          max-width: 100%;
+          padding-bottom: 20px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__graph {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > div {
+      width: 100%;
+      max-width: calc((100% - 200px) / 2);
+      @include adaptive(1279) {
+        max-width: calc((100% - 100px) / 2);
+      }
+      @include adaptive(1023) {
+        max-width: 100%;
+        padding-left: 100px;
+        padding-right: 100px;
+
+        & + div {
+          padding-top: 50px;
+        }
+      }
+      @include adaptive(767) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &-title {
+      padding-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 26px;
+      font-weight: bold;
+      @include adaptive(1279) {
+        font-size: 23px;
+      }
+      @include adaptive(1023) {
+        text-align: center;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+// SECTION :: END
