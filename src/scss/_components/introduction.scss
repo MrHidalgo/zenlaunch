@@ -130,6 +130,7 @@
     }
 
     &-canvas {
+      opacity: 0;
       @extend %imageResCoverAbs;
     }
 

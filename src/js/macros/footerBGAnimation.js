@@ -108,7 +108,9 @@ const FooterBGAnimation = (function() {
 
     const jsonUri = "data:text/plain;base64,"+window.btoa(JSON.stringify(particlesJSConfig));
 
-    particlesJS.load('footer__bg-canvas', jsonUri, function() {});
+    particlesJS.load('footer__bg-canvas', jsonUri, function() {
+      document.getElementById('footer__bg-canvas').style.opacity = '0.55';
+    });
   };
   return {
     init: init

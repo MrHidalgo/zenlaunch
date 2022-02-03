@@ -15,9 +15,9 @@ window.addEventListener('load', (ev) => {
 
   // MACROS
   headerFixed.init();
-  // FutureBGAnimation.init();
-  // IntroductionBGAnimation.init();
-  // FooterBGAnimation.init();
+  FutureBGAnimation.init();
+  IntroductionBGAnimation.init();
+  FooterBGAnimation.init();
   ChartCB.init();
 
 }, false);

@@ -170,7 +170,9 @@ var IntroductionBGAnimation = function () {
       "retina_detect": true
     };
     var jsonUri = "data:text/plain;base64," + window.btoa(JSON.stringify(particlesJSConfig));
-    particlesJS.load('introduction__box-canvas', jsonUri, function () {});
+    particlesJS.load('introduction__box-canvas', jsonUri, function () {
+      document.getElementById('introduction__box-canvas').style.opacity = '1';
+    });
   };
 
   return {
@@ -524,7 +526,9 @@ var FooterBGAnimation = function () {
       "retina_detect": true
     };
     var jsonUri = "data:text/plain;base64," + window.btoa(JSON.stringify(particlesJSConfig));
-    particlesJS.load('footer__bg-canvas', jsonUri, function () {});
+    particlesJS.load('footer__bg-canvas', jsonUri, function () {
+      document.getElementById('footer__bg-canvas').style.opacity = '0.55';
+    });
   };
 
   return {
@@ -651,7 +655,9 @@ var FutureBGAnimation = function () {
       "retina_detect": true
     };
     var jsonUri = "data:text/plain;base64," + window.btoa(JSON.stringify(particlesJSConfig));
-    particlesJS.load('future__bg-canvas', jsonUri, function () {});
+    particlesJS.load('future__bg-canvas', jsonUri, function () {
+      document.getElementById('future__bg-canvas').style.opacity = '0.55';
+    });
   };
 
   return {
@@ -759,10 +765,10 @@ window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
 
-  _macros_headerFixed__WEBPACK_IMPORTED_MODULE_1__["default"].init(); // FutureBGAnimation.init();
-  // IntroductionBGAnimation.init();
-  // FooterBGAnimation.init();
-
+  _macros_headerFixed__WEBPACK_IMPORTED_MODULE_1__["default"].init();
+  _macros_futureBGAnimation__WEBPACK_IMPORTED_MODULE_2__["default"].init();
+  _macros_IntroductionBGAnimation__WEBPACK_IMPORTED_MODULE_3__["default"].init();
+  _macros_footerBGAnimation__WEBPACK_IMPORTED_MODULE_4__["default"].init();
   _macros_chart__WEBPACK_IMPORTED_MODULE_5__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================

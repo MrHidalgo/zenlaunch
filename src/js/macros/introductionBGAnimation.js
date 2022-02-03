@@ -113,7 +113,9 @@ const IntroductionBGAnimation = (function() {
 
     const jsonUri = "data:text/plain;base64,"+window.btoa(JSON.stringify(particlesJSConfig));
 
-    particlesJS.load('introduction__box-canvas', jsonUri, function() {});
+    particlesJS.load('introduction__box-canvas', jsonUri, function() {
+      document.getElementById('introduction__box-canvas').style.opacity = '1';
+    });
   };
   return {
     init: init

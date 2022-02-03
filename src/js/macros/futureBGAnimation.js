@@ -108,7 +108,9 @@ const FutureBGAnimation = (function() {
 
     const jsonUri = "data:text/plain;base64,"+window.btoa(JSON.stringify(particlesJSConfig));
 
-    particlesJS.load('future__bg-canvas', jsonUri, function() {});
+    particlesJS.load('future__bg-canvas', jsonUri, function() {
+      document.getElementById('future__bg-canvas').style.opacity = '0.55';
+    });
   };
   return {
     init: init
