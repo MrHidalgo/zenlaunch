@@ -547,6 +547,193 @@ picture {
   font-size: 28px;
 }
 
+.problems {
+  z-index: 6;
+  position: relative;
+}
+.problems__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px 0 100px 0;
+  background: -webkit-gradient(linear, left top, right top, from(#0f1a39), color-stop(50%, #0e2e57), to(#0f1a39));
+  background: -o-linear-gradient(left, #0f1a39 0%, #0e2e57 50%, #0f1a39 100%);
+  background: linear-gradient(to right, #0f1a39 0%, #0e2e57 50%, #0f1a39 100%);
+}
+@media screen and (max-width: 767px) {
+  .problems__bg {
+    border-radius: 50px 0 50px 0;
+  }
+}
+.problems__bg-corner {
+  overflow: hidden;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 767px) {
+  .problems__bg-corner {
+    width: 50px;
+    height: 50px;
+  }
+}
+.problems__bg-corner:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  border-radius: 100px;
+}
+.problems__bg-corner-1 {
+  top: 0;
+  right: 0;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.problems__bg-corner-1:before {
+  bottom: 0;
+  right: 0;
+  -webkit-box-shadow: 50px 50px 0 0 #0f1b3a;
+          box-shadow: 50px 50px 0 0 #0f1b3a;
+}
+.problems__bg-corner-2 {
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+}
+.problems__bg-corner-2:before {
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: -50px -50px 0 0 #0f1b3a;
+          box-shadow: -50px -50px 0 0 #0f1b3a;
+}
+.problems__wrapper {
+  z-index: 2;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.problems__desc {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.problems__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.problems__box-wrapper {
+  position: relative;
+  left: -90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: calc(100% + 90px);
+}
+@media screen and (max-width: 1279px) {
+  .problems__box-wrapper {
+    left: -50px;
+    width: calc(100% + 50px);
+  }
+}
+.problems__box-wrapper > div {
+  width: 100%;
+  max-width: 33.3333333333%;
+  padding-left: 90px;
+}
+@media screen and (max-width: 1279px) {
+  .problems__box-wrapper > div {
+    padding-left: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .problems__box-wrapper > div {
+    max-width: 100%;
+  }
+  .problems__box-wrapper > div:not(:last-of-type) {
+    padding-bottom: 50px;
+  }
+}
+.problems__box-head {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 190px;
+  height: 190px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  background: -o-linear-gradient(315deg, #00f968 0%, #00babb 100%);
+  background: linear-gradient(135deg, #00f968 0%, #00babb 100%);
+}
+@media screen and (max-width: 1279px) {
+  .problems__box-head {
+    width: 155px;
+    height: 155px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .problems__box-head {
+    width: 125px;
+    height: 125px;
+  }
+}
+.problems__box-head img {
+  display: block;
+  max-width: 115px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1279px) {
+  .problems__box-head img {
+    max-width: 95px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .problems__box-head img {
+    max-width: 75px;
+  }
+}
+.problems__box-body {
+  padding-top: 40px;
+}
+.problems__box-body p {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .problems__box-body p {
+    font-size: 14px;
+  }
+}
+
 .signal {
   z-index: 11;
   position: relative;
