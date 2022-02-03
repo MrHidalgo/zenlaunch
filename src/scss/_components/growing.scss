@@ -61,11 +61,11 @@
       text-transform: uppercase;
       font-size: 26px;
       font-weight: bold;
+      text-align: center;
       @include adaptive(1279) {
         font-size: 23px;
       }
       @include adaptive(1023) {
-        text-align: center;
         font-size: 20px;
       }
     }

@@ -1,6 +1,7 @@
 import Common from "./common/common";
 
 import FooterBGAnimation from "./macros/footerBGAnimation";
+import IntroductionBGAnimation from "./macros/IntroductionBGAnimation";
 import ChartCB from "./macros/chart";
 
 // EVENT LISTENER - LOAD
@@ -12,6 +13,7 @@ window.addEventListener('load', (ev) => {
 
   // MACROS
   // FooterBGAnimation.init();
+  IntroductionBGAnimation.init();
   ChartCB.init();
 
 }, false);
