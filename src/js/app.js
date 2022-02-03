@@ -1,8 +1,9 @@
 import Common from "./common/common";
 
-import FooterBGAnimation from "./macros/footerBGAnimation";
+import headerFixed from "./macros/headerFixed";
+import FutureBGAnimation from "./macros/futureBGAnimation";
 import IntroductionBGAnimation from "./macros/IntroductionBGAnimation";
-import HeaderBGAnimation from "./macros/headerBGAnimation";
+import FooterBGAnimation from "./macros/footerBGAnimation";
 import ChartCB from "./macros/chart";
 
 // EVENT LISTENER - LOAD
@@ -13,7 +14,8 @@ window.addEventListener('load', (ev) => {
   Common.initLoad();
 
   // MACROS
-  // HeaderBGAnimation.init();
+  headerFixed.init();
+  // FutureBGAnimation.init();
   // IntroductionBGAnimation.init();
   // FooterBGAnimation.init();
   ChartCB.init();

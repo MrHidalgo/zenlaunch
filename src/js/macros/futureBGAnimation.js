@@ -1,4 +1,4 @@
-const HeaderBGAnimation = (function() {
+const FutureBGAnimation = (function() {
   const init = function() {
     const particlesJSConfig = {
       "particles": {
@@ -116,4 +116,4 @@ const HeaderBGAnimation = (function() {
 
 })();
 
-export default HeaderBGAnimation;
+export default FutureBGAnimation;

@@ -536,14 +536,14 @@ var FooterBGAnimation = function () {
 
 /***/ }),
 
-/***/ "./src/js/macros/headerBGAnimation.js":
+/***/ "./src/js/macros/futureBGAnimation.js":
 /*!********************************************!*\
-  !*** ./src/js/macros/headerBGAnimation.js ***!
+  !*** ./src/js/macros/futureBGAnimation.js ***!
   \********************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-var HeaderBGAnimation = function () {
+var FutureBGAnimation = function () {
   var init = function init() {
     var particlesJSConfig = {
       "particles": {
@@ -659,7 +659,39 @@ var HeaderBGAnimation = function () {
   };
 }();
 
-/* harmony default export */ __webpack_exports__["default"] = (HeaderBGAnimation);
+/* harmony default export */ __webpack_exports__["default"] = (FutureBGAnimation);
+
+/***/ }),
+
+/***/ "./src/js/macros/headerFixed.js":
+/*!**************************************!*\
+  !*** ./src/js/macros/headerFixed.js ***!
+  \**************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var HeaderFixed = function () {
+  var init = function init() {
+    var getCurrentScroll = function getCurrentScroll() {
+      return window.pageYOffset || document.documentElement.scrollTop;
+    };
+
+    var shrinkHeader = 100;
+    var scroll = getCurrentScroll();
+    var headerEl = document.getElementById('header');
+    scroll >= shrinkHeader ? headerEl.classList.add('is-fixed') : headerEl.classList.remove('is-fixed');
+    window.addEventListener('scroll', function () {
+      var scroll = getCurrentScroll();
+      scroll >= shrinkHeader ? headerEl.classList.add('is-fixed') : headerEl.classList.remove('is-fixed');
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (HeaderFixed);
 
 /***/ })
 
@@ -710,10 +742,12 @@ var __webpack_exports__ = {};
   \***********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/common */ "./src/js/common/common.js");
-/* harmony import */ var _macros_footerBGAnimation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/footerBGAnimation */ "./src/js/macros/footerBGAnimation.js");
-/* harmony import */ var _macros_IntroductionBGAnimation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./macros/IntroductionBGAnimation */ "./src/js/macros/IntroductionBGAnimation.js");
-/* harmony import */ var _macros_headerBGAnimation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./macros/headerBGAnimation */ "./src/js/macros/headerBGAnimation.js");
-/* harmony import */ var _macros_chart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./macros/chart */ "./src/js/macros/chart.js");
+/* harmony import */ var _macros_headerFixed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/headerFixed */ "./src/js/macros/headerFixed.js");
+/* harmony import */ var _macros_futureBGAnimation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./macros/futureBGAnimation */ "./src/js/macros/futureBGAnimation.js");
+/* harmony import */ var _macros_IntroductionBGAnimation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./macros/IntroductionBGAnimation */ "./src/js/macros/IntroductionBGAnimation.js");
+/* harmony import */ var _macros_footerBGAnimation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./macros/footerBGAnimation */ "./src/js/macros/footerBGAnimation.js");
+/* harmony import */ var _macros_chart__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./macros/chart */ "./src/js/macros/chart.js");
+
 
 
 
@@ -724,11 +758,12 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
-  // HeaderBGAnimation.init();
+
+  _macros_headerFixed__WEBPACK_IMPORTED_MODULE_1__["default"].init(); // FutureBGAnimation.init();
   // IntroductionBGAnimation.init();
   // FooterBGAnimation.init();
 
-  _macros_chart__WEBPACK_IMPORTED_MODULE_4__["default"].init();
+  _macros_chart__WEBPACK_IMPORTED_MODULE_5__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

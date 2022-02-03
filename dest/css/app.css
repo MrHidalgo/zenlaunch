@@ -201,6 +201,15 @@ picture {
 }
 .logo.logo--header {
   width: 100%;
+  max-width: 250px;
+}
+@media screen and (max-width: 767px) {
+  .logo.logo--header {
+    max-width: 145px;
+  }
+}
+.logo.logo--future {
+  width: 100%;
   max-width: 970px;
   margin-left: auto;
   margin-right: auto;
@@ -336,6 +345,97 @@ picture {
   margin: 25px auto;
   background: -o-linear-gradient(315deg, #00f968 0%, #00babb 100%);
   background: linear-gradient(135deg, #00f968 0%, #00babb 100%);
+}
+
+.header {
+  z-index: 990;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(8, 14, 31, 0.2);
+          box-shadow: 0 5px 10px 0 rgba(8, 14, 31, 0.2);
+  background-color: rgba(8, 14, 31, 0.35);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+.header.is-fixed {
+  background-color: rgba(8, 14, 31, 0.95);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 65px;
+}
+.header__wrapper-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 30px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1279px) {
+  .header__nav a {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__nav a {
+    margin-left: 10px;
+    margin-right: 0;
+    font-size: 12px;
+  }
+}
+.header__nav a.is-active {
+  font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .header .footer__social {
+    display: none;
+  }
+}
+.header .footer__social li a {
+  width: 34px;
+  height: 34px;
+}
+.header .footer__social li a .icon-font {
+  font-size: 22px;
 }
 
 .footer {

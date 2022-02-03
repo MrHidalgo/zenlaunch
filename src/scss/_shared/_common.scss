@@ -5,6 +5,14 @@
 
   &.logo--header {
     width: 100%;
+    max-width: 250px;
+    @include adaptive(767) {
+      max-width: 145px;
+    }
+  }
+
+  &.logo--future {
+    width: 100%;
     max-width: 970px;
     margin-left: auto;
     margin-right: auto;
