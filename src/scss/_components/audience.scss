@@ -33,6 +33,10 @@
           box-shadow: 0 0 70px 0 rgba(#00eb74, 0.6);
           background: radial-gradient(ellipse at center, #00f968 0%,#00babb 100%);
 
+          &:before {
+            opacity: 0;
+          }
+
           &:after {
             display: none;
           }
@@ -73,10 +77,30 @@
       margin-left: auto;
       margin-right: auto;
       border-radius: 50%;
-      background: conic-gradient(from 35deg, #080e1f, #00e873);
       @include adaptive(1279) {
         width: 155px;
         height: 155px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: conic-gradient(from 35deg, #080e1f, #00e873);
+        animation: animationCircle 10s linear infinite;
+      }
+
+      @keyframes animationCircle {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
       }
 
       &:after {
